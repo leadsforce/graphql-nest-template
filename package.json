@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "docker-compose -f platform/docker-compose.yml up --build",
+    "dev": "docker-compose up --build",
     "build:cmd": "swc scripts -d bin/scripts",
     "build:watch": "npm run build:cmd && node bin/scripts/dev src bin bin/api/server",
     "build": "npm run build:cmd && node bin/scripts/dev/build src bin"

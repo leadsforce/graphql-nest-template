@@ -4,19 +4,13 @@ services:
   backend:
     build:
       dockerfile: platform/Dockerfile
-      context: ../
-    env_file: ../.env
+      context: .
+    env_file: .env
     command: ["npm", "run", "build:watch"]
     volumes:
-      - ../src:/app/src/
+      - ./src:/app/src/
     ports:
-      - 8080:8080
-  
-  meili:
-    image: getmeili/meilisearch
-    container_name: meili
-    ports:
-      - 7700:7700
+      - 3000:${PORT}
 
 networks:
   default:
