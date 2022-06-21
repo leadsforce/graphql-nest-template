@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "Api/*": ["./src/api/*"],
+      "Config/*": ["./src/config/*"],
+      "Domain/*": ["./src/domain/*"],
+      "Repo/*": ["./src/repository/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}
